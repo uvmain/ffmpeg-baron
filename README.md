@@ -5,6 +5,7 @@ Downloads Ffmpeg for use in npm/npx scripts
 
 ````
 "scripts": {
-    "ffmpeg:version": "ffmpeg --version",
+    "ffmpeg:version": "ffmpeg -version",
+    "ffmpeg:convert:avi:mp4": "ffmpeg -i input.avi output.mp4"
 }
 ````
