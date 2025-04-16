@@ -1,0 +1,22 @@
+{
+  "name": "baron-ffmpeg",
+  "version": "1.0.0",
+  "description": "Downloads the ffmpeg binary for use in npx scripts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uvmain/baron-ffmpeg.git"
+  },
+  "keywords": [
+    "ffmpeg"
+  ],
+  "author": "Ian Baron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uvmain/baron-ffmpeg/issues"
+  },
+  "homepage": "https://github.com/uvmain/baron-ffmpeg#readme"
+}
