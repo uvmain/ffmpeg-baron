@@ -70,6 +70,11 @@ function downloadFile(downloadUrl) {
       writeStream.close();
       console.log(`Download complete: ${fileName}`);
       await unzip();
+
+      if (platform === 'win32') {
+        fs.copyFileSync('./ffmpeg.exe', './ffmpeg')
+      }
+
     });
 
     writeStream.on('error', err => {
@@ -89,7 +94,8 @@ async function unzip() {
     });
     fs.unlinkSync(fileString);
     console.log('Extraction complete. Cleaned up archive.');
-  } catch (err) {
+  }
+  catch (err) {
     console.error('Error extracting ffmpeg:', err);
   }
 }

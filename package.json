@@ -1,6 +1,6 @@
 {
   "name": "ffmpeg-baron",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Downloads the ffmpeg binary for use in npx scripts",
   "main": "index.js",
   "bin": {
