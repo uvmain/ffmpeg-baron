@@ -2,27 +2,33 @@
   "name": "ffmpeg-baron",
   "version": "1.0.1",
   "description": "Downloads the ffmpeg binary for use in npx scripts",
+  "author": "Ian Baron",
+  "license": "ISC",
+  "homepage": "https://github.com/uvmain/ffmpeg-baron#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uvmain/ffmpeg-baron.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uvmain/ffmpeg-baron/issues"
+  },
+  "keywords": [
+    "ffmpeg"
+  ],
   "main": "index.js",
   "bin": {
     "ffmpeg": "./ffmpeg"
   },
   "scripts": {
-    "install": "node index.mjs"
+    "install": "node index.mjs",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/uvmain/ffmpeg-baron.git"
-  },
-  "keywords": [
-    "ffmpeg"
-  ],
-  "author": "Ian Baron",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/uvmain/ffmpeg-baron/issues"
-  },
-  "homepage": "https://github.com/uvmain/ffmpeg-baron#readme",
   "dependencies": {
     "decompress": "^4.2.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.14.1",
+    "eslint": "^9.29.0"
   }
 }
