@@ -7,6 +7,7 @@ import decompress from 'decompress'
 const platform = os.platform()
 const arch = os.arch()
 const macosxDir = './__MACOSX'
+const fileName = 'ffmpeg.zip'
 let fileString = ''
 let target = ''
 
@@ -76,7 +77,6 @@ async function downloadZip(url) {
       throw new Error(`Failed to download file: ${response.status} ${response.statusText}`)
     }
 
-    const fileName = 'ffmpeg.zip'
     const writeStream = createWriteStream(fileName)
 
     await pipeline(response.body, writeStream)
