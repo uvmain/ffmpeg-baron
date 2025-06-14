@@ -1,6 +1,6 @@
 {
   "name": "ffmpeg-baron",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Downloads the ffmpeg binary for use in npx scripts",
   "author": "Ian Baron",
   "license": "ISC",
@@ -20,7 +20,7 @@
     "ffmpeg": "./ffmpeg"
   },
   "scripts": {
-    "install": "node index.mjs",
+    "preinstall": "node index.mjs",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
   },
