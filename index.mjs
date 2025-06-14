@@ -90,7 +90,15 @@ async function downloadZip(url) {
   }
   catch (err) {
     console.error('Error downloading zip:', err)
-    fs.unlinkSync('ffmpeg.zip')
+    cleanup()
+  }
+}
+
+function cleanup() {
+  if (fs.existsSync(fileName)) {
+    fs.unlinkSync(fileName)
+  }
+  if (fs.existsSync(macosxDir)) {
     fs.rmSync(macosxDir, { recursive: true, force: true })
   }
 }
@@ -100,10 +108,7 @@ async function unzip() {
     await decompress(fileString, '.', {
       filter: file => file.path.includes('ffmpeg'),
     })
-    fs.unlinkSync(fileString)
-    if (fs.existsSync(macosxDir)) {
-      fs.rmSync(macosxDir, { recursive: true, force: true })
-    }
+    cleanup()
   }
   catch (err) {
     console.error(err)
